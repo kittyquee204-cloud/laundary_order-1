@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pokus Laundry Ops</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans bg-gray-100 m-0">
+
+  <!-- Header -->
+  <header class="bg-blue-600 text-white p-6 text-center">
+    <h1 class="text-2xl font-bold">Pokus Laundry Operations</h1>
+    <p class="text-lg">Order Management Dashboard</p>
+  </header>
+
+  <!-- Container -->
+  <div class="max-w-4xl mx-auto p-6">
+
+    <!-- Create Order Card -->
+    <div class="bg-white p-6 mb-6 rounded-lg shadow">
+      <h2 class="text-xl font-semibold mb-4">Create Order</h2>
+
+      <label class="block mb-2">Customer Name</label>
+      <input id="name" class="w-full p-2 mb-4 border border-gray-300 rounded" />
+
+      <label class="block mb-2">Phone</label>
+      <input id="phone" class="w-full p-2 mb-4 border border-gray-300 rounded" />
+
+      <label class="block mb-2">Address</label>
+      <input id="address" class="w-full p-2 mb-4 border border-gray-300 rounded" />
+
+      <label class="block mb-2">Service</label>
+      <select id="service" class="w-full p-2 mb-4 border border-gray-300 rounded">
+        <option>Iron</option>
+        <option>Express Iron (30 min)</option>
+        <option>2 Hour Delivery</option>
+        <option>Dry Cleaning</option>
+        <option>Inspection</option>
+      </select>
+
+      <label class="block mb-2">Items</label>
+      <input id="items" class="w-full p-2 mb-4 border border-gray-300 rounded" />
+
+      <label class="block mb-2">Price (₹)</label>
+      <input id="price" class="w-full p-2 mb-4 border border-gray-300 rounded" />
+
+      <button onclick="createOrder()" 
+              class="w-full bg-blue-600 text-white py-3 rounded hover:bg-blue-700 transition">
+        Create Order
+      </button>
+    </div>
+
+    <!-- Orders Card -->
+    <div class="bg-white p-6 rounded-lg shadow">
+      <h2 class="text-xl font-semibold mb-4">Orders</h2>
+      <table id="ordersTable" class="w-full border-collapse">
+        <thead>
+          <tr class="border-b">
+            <th class="text-left p-2">ID</th>
+            <th class="text-left p-2">Customer</th>
+            <th class="text-left p-2">Service</th>
+            <th class="text-left p-2">Rider</th>
+            <th class="text-left p-2">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Orders will be injected here -->
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
